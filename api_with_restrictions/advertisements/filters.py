@@ -5,16 +5,17 @@ from django_filters.rest_framework import DateFromToRangeFilter
 
 class AdvertisementFilter(filters.FilterSet):
     """Фильтры для объявлений."""
-    filterset_fields = ["creator"]
-    search_fields = ["creator"]
-    ordering_fields = ["creator"]
+    filterset_fields = ["creator", "status"]
+    search_fields = ["creator", "status"]
+    ordering_fields = ["creator", "status"]
 
     class Meta:
         model = Advertisement
-        fields = ["creator"]
+        fields = ["creator", "status"]
+
 
 class DateFromToRange(filters.FilterSet):
-    data_fields = ["created_at"]
+    date_fields = ["created_at"]
     created_at = DateFromToRangeFilter()
 
     class Meta:

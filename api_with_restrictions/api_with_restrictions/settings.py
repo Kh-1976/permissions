@@ -55,7 +55,6 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'advertisements.urls'
-#AUTH_USER_MODEL
 
 TEMPLATES = [
     {
@@ -97,6 +96,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'netology_classified_ads',
+
         'HOST': '127.0.0.1',
         'PORT': '5432',
     }
